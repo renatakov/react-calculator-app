@@ -70,7 +70,7 @@ body {
     display: flex;
     flex-direction: column;
     width: 30vw;
-    height: 60vh;
+    height: 80vh;
     margin: 4rem auto;
     gap: 1rem;
 }
@@ -81,23 +81,81 @@ header {
     justify-content: space-between;
 }
 
-.calculatorScreen{
+.calculatorScreen {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding: 1rem;
+    letter-spacing: 3px;
     width: 100%;
-    height:  15vh;
+    height: 15vh;
     border-radius: 5px;
     background-color: var(--theme1-screen-bg);
     margin-bottom: 1rem;
 }
 
-.calculatorKeyboard{
-    background-color: var(--theme1-toogle-and-keyboard-bg);
-    height:  45vh;
-    border-radius: 5px;
+.calculatorScreen p {
+    font-size: 32px;
+    color: var(--theme1-text-color2);
 }
 
-.keyboardMain{
+.calculatorKeyboard {
+    background-color: var(--theme1-toogle-and-keyboard-bg);
+    height: 65vh;
+    border-radius: 5px;
+    padding: 3rem;
+
+}
+
+.keyboardMain {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    justify-items: center;
-    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.keyboardMain span,
+.keyboardMain button {
+    font-size: 200%;
+    background-color: var(--theme1-key-bg3);
+    text-align: center;
+    border-radius: 3px;
+    padding: 1rem;
+    box-shadow: 0px 4px 0px 0px var(--theme1-key-shadow3);
+    
+}
+
+.keyboardMain button {
+    background-color: var(--theme1-key-bg1);
+    border: none;
+    box-shadow: 0px 4px 0px 0px var(--theme1-key-shadow1);
+    color: var(--theme1-text-color2);
+
+}
+
+.keyboardButtons{
+    display: flex;
+    width: 100%;
+}
+
+.keyboardButtons button{
+    flex: 1;
+    padding: 1rem;
+    border-radius: 3px;
+    border: none;
+    color: var(--theme1-text-color2);
+    font-size: 200%;
+}
+
+.resetBtn{
+    margin-right: 1rem;
+    background-color: var(--theme1-key-bg1);
+    box-shadow: 0px 4px 0px 0px var(--theme1-key-shadow1);
+
+}
+
+.equalBtn{
+    background-color: var(--theme1-key-bg2);
+    box-shadow: 0px 4px 0px 0px var(--theme1-key-shadow2);
+
 }
