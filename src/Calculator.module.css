@@ -33,8 +33,7 @@
     --theme2-key-bg2: hsl(25, 98%, 40%);
     --theme2-key-shadow2: hsl(25, 99%, 27%);
 
-    --theme2-key-bg3: hsl(45, 7%, 89%)
-    --theme2-key-shadow3: hsl(35, 11%, 61%);
+    --theme2-key-bg3: hsl(45, 7%, 89%) --theme2-key-shadow3: hsl(35, 11%, 61%);
 
     --theme2-text-color1: hsl(60, 10%, 19%);
     --theme2-text-color2: hsl(0, 0%, 100%);
@@ -67,7 +66,7 @@ li {
     list-style: none;
 }
 
-body{
+body {
     background-color: var(--theme1-main-bg);
 }
 
@@ -75,8 +74,12 @@ body.theme1 {
     background-color: var(--theme1-main-bg);
 }
 
-body.theme2{
+body.theme2 {
     background-color: var(--theme2-screen-bg);
+}
+
+body.theme3 {
+    background-color: var(--theme3-main-bg);
 }
 
 .calculator {
@@ -88,7 +91,7 @@ body.theme2{
     gap: 1rem;
 }
 
-.theme2 main div.calculatorScreen{
+.theme2 main div.calculatorScreen {
     background-color: var(--theme2-main-bg)
 }
 
@@ -100,11 +103,18 @@ header {
 }
 
 .theme2,
-.theme2 header{
+.theme2 .calculatorScreen p,
+.theme2 header {
     color: var(--theme2-text-color1);
 }
 
-.theme2 .calculatorKeyboard{
+.theme3,
+.theme3 .calculatorScreen p,
+.theme3 header {
+    color: var(--theme3-text-color1);
+}
+
+.theme2 .calculatorKeyboard {
     background-color: hsl(0, 5%, 81%);
 }
 
@@ -133,7 +143,7 @@ header {
 
 }
 
-.toggleInputs{
+.toggleInputs {
     width: 4vw;
     background-color: var(--theme1-toogle-and-keyboard-bg);
     padding: .3rem;
@@ -148,12 +158,32 @@ header {
     opacity: 0;
 }
 
-.theme2 .toggleInputs input:not(.toggleInput2){
+.theme2 .toggleInputs input {
     opacity: 0;
 }
 
-.theme2 .toggleInputs{
-    background-color: var(--theme2-toggle-bg);
+.theme2 .toggleInputs input.toggleInput2 {
+    opacity: 1;
+}
+
+.theme3 .toggleInputs input {
+    opacity: 0;
+}
+
+.theme3 .toggleInputs input:last-child {
+    opacity: 1;
+}
+
+.theme3 .toggleInputs {
+    background-color: var(--theme3-screen-bg);
+}
+
+.theme3 .calculatorKeyboard {
+    background-color: var(--theme3-screen-bg);
+}
+
+.theme2 .toggleInputs {
+    background-color: rgba(234, 224, 224, 0.845);
 }
 
 .toggleInputs input:first-child::after {
@@ -165,6 +195,7 @@ header {
     border-radius: 50%;
     background-color: red;
 }
+
 .theme1 .toggleInputs input:first-child::after {
     content: '';
     display: block;
@@ -175,16 +206,25 @@ header {
     background-color: red;
 }
 
-.theme2  .toggleInput2::after{
+.theme2 .toggleInput2::after {
     content: '';
     display: block;
     position: relative;
     width: 13px;
     height: 13px;
     border-radius: 50%;
-    background-color: var(--theme2-key-shadow2);
+    background-color: var(--theme2-key-bg2);
 }
 
+.theme3 input:last-child::after {
+    content: '';
+    display: block;
+    position: relative;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background-color: var(--theme3-key-bg2);
+}
 
 .calculatorScreen {
     display: flex;
@@ -201,12 +241,12 @@ header {
 
 .theme1 main .calculatorScreen {
     background-color: var(--theme1-screen-bg);
-    
+
 }
 
 .theme3 main .calculatorScreen {
     background-color: var(--theme3-screen-bg);
-    
+
 }
 
 .calculatorScreen p {
@@ -240,6 +280,17 @@ header {
 
 }
 
+.theme3 .keyboardMain span,
+.theme3 .keyboardMain button {
+    font-size: 200%;
+    background-color: var(--theme3-key-bg1);
+    text-align: center;
+    border-radius: 3px;
+    padding: 1rem;
+    box-shadow: 0px 4px 0px 0px var(--theme3-key-shadow3);
+
+}
+
 .keyboardMain button {
     background-color: var(--theme1-key-bg1);
     border: none;
@@ -269,10 +320,15 @@ header {
 
 }
 
-.theme2 .resetBtn{
+.theme2 .resetBtn {
     background-color: var(--theme2-key-bg1);
     box-shadow: 0px 4px 0px 0px var(--theme2-key-shadow1);
 
+}
+
+.theme3 .resetBtn{
+    background-color: var(--theme3-key-bg1);
+    box-shadow: 0px 4px 0px 0px var(--theme3-key-shadow1);
 }
 
 .equalBtn {
@@ -281,9 +337,15 @@ header {
 
 }
 
-.theme2 .equalBtn{
+.theme2 .equalBtn {
     background-color: var(--theme2-key-bg2);
     box-shadow: 0px 4px 0px 0px var(--theme2-key-shadow2);
+}
+
+.theme3 .equalBtn {
+    background-color: var(--theme3-key-bg2);
+    box-shadow: 0px 4px 0px 0px var(--theme3-key-shadow2);
+    color: var(--theme3-text-color2);
 }
 
 .theme2 .keyboardMain button {
