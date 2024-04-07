@@ -67,6 +67,7 @@ li {
 }
 
 body {
+    margin: 0 auto;
     background-color: var(--theme1-main-bg);
 }
 
@@ -85,9 +86,8 @@ body.theme3 {
 .calculator {
     display: flex;
     flex-direction: column;
-    width: 30vw;
-    height: 80vh;
-    margin: 4rem auto;
+    width: min-content;
+    margin: 2rem auto;
     gap: 1rem;
 }
 
@@ -144,7 +144,6 @@ header {
 }
 
 .toggleInputs {
-    width: 4vw;
     background-color: var(--theme1-toogle-and-keyboard-bg);
     padding: .3rem;
     border-radius: 10px;
@@ -255,10 +254,10 @@ header {
 }
 
 .calculatorKeyboard {
+    width: 100%;
     background-color: var(--theme1-toogle-and-keyboard-bg);
-    height: 65vh;
     border-radius: 5px;
-    padding: 3rem;
+    padding: 1rem;
 
 }
 
