@@ -189,8 +189,8 @@ header {
     content: '';
     display: block;
     position: relative;
-    width: 14px;
-    height: 14px;
+    width: 15px;
+    height: 15px;
     border-radius: 50%;
     background-color: red;
 }
@@ -199,8 +199,8 @@ header {
     content: '';
     display: block;
     position: relative;
-    width: 14px;
-    height: 14px;
+    width: 15px;
+    height: 15px;
     border-radius: 50%;
     background-color: red;
 }
@@ -209,8 +209,8 @@ header {
     content: '';
     display: block;
     position: relative;
-    width: 14px;
-    height: 14px;
+    width: 15px;
+    height: 15px;
     border-radius: 50%;
     background-color: var(--theme2-key-bg2);
 }
@@ -219,8 +219,8 @@ header {
     content: '';
     display: block;
     position: relative;
-    width: 14px;
-    height: 14px;
+    width: 15px;
+    height: 15px;
     border-radius: 50%;
     background-color: var(--theme3-key-bg2);
 }
